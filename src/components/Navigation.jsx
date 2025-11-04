@@ -29,12 +29,7 @@ const location = useLocation ()
           >
             Collection
           </Link>
-          <Link
-          to="/"
-          className={location.pathname === '/details' ? 'nav-link active' : 'nav-link'}
-          >
-            Details
-          </Link>
+          
         
         
       </div>
