@@ -4,6 +4,8 @@ import BookSearch from './components/BookSearch'
 import BookCollection from './components/BookCollection'
 import BookDetails from './components/BookDetails'
 import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 function App() {
   // Simple state management for current view
@@ -12,8 +14,6 @@ function App() {
 
   // TODO: Replace this simple navigation with React Router
   // Students will need to:
-  // 1. Install react-router-dom: npm install react-router-dom
-  // 2. Import BrowserRouter, Routes, Route, Link from react-router-dom
   // 3. Replace the conditional rendering below with proper routing
   // 4. Create separate page components for each route
   // 5. Update Navigation component to use Link components instead of buttons
@@ -32,6 +32,7 @@ function App() {
         )
       default:
         return (
+          <Router>
           <div className="home-view">
             <h1>Welcome to CodeCaddy</h1>
             <p>Your personal book collection manager</p>
@@ -43,7 +44,10 @@ function App() {
                 View Collection
               </button>
             </div>
+            
           </div>
+          
+          </Router>
         )
     }
   }
